@@ -63,10 +63,6 @@ spec:
             - name: GRID_NEW_SESSION_WAIT_TIMEOUT
               value: {{ .Values.hub.gridNewSessionWaitTimeout | quote }}
             {{- end }}
-            {{- if .Values.hub.gridJettyMaxThreads }}
-            - name: GRID_JETTY_MAX_THREADS
-              value: {{ .Values.hub.gridJettyMaxThreads | quote }}
-            {{- end }}
             {{- if .Values.hub.gridNodePolling }}
             - name: GRID_NODE_POLLING
               value: {{ .Values.hub.gridNodePolling | quote }}
